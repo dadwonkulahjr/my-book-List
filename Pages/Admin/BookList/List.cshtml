@@ -1,0 +1,50 @@
+﻿@page
+@model MyBookList.Pages.Admin.BookList.ListModel
+@{
+    ViewData["Title"] = "Book List";
+}
+
+<br />
+<div class="border backgroundWhite shadow">
+    <div class="container m-0 p-0 row">
+        <div class="col-9">
+            <h2 class="text-info">
+                <i class="fas fa-tachometer-alt"></i>&nbsp;Book List
+            </h2>
+        </div>
+        <div class="col-3">
+            <a class="btn btn-info form-control mb-3 text-white" style="height:auto" asp-page="upsert">
+                <i class="fa fa-plus-circle"></i>&nbsp;NEW BOOK
+            </a>
+        </div>
+        <hr />
+        <div class="col-sm-12 border mt-1 p-4 table-responsive">
+            <form method="post">
+                @*<div class="table-responsive">*@
+                    <table class="table border table-hover table-striped" id="books" style="width:100%;">
+                        <thead class="table-secondary">
+                            <tr>
+                                <th>Name</th>
+                                <th>Author</th>
+                                <th>ISBN</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                    </table>
+                @*</div>*@
+
+
+
+
+            </form>
+
+
+
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/list.js"></script>
+
+}
